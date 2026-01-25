@@ -1,0 +1,94 @@
+.cx-metric-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.cx-metric-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.cx-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.cx-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cx-primary-value {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1;
+}
+
+.cx-subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: -8px;
+}
+
+.cx-trend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.cx-trend.positive {
+  color: #10b981;
+}
+
+.cx-trend.negative {
+  color: #ef4444;
+}
+
+.trend-arrow {
+  font-size: 20px;
+}
+
+.cx-sparkline {
+  height: 50px;
+  margin: 8px 0;
+}
+
+.cx-comparison {
+  font-size: 13px;
+  color: #4b5563;
+  padding: 8px 12px;
+  background: #f0f9ff;
+  border-radius: 6px;
+  border-left: 3px solid #3b82f6;
+}
+
+.cx-benchmark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: 8px 12px;
+  background: #fef3c7;
+  border-radius: 6px;
+}
+
+.benchmark-label {
+  color: #92400e;
+  font-weight: 500;
+}
+
+.benchmark-value {
+  color: #78350f;
+  font-weight: 700;
+}

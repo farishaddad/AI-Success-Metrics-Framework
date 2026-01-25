@@ -1,0 +1,16 @@
+.model-performance-dashboard {
+  width: 100%;
+}
+
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1200px) {
+  .performance-grid {
+    grid-template-columns: 1fr;
+  }
+}

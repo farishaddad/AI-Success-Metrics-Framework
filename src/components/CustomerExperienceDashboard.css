@@ -1,0 +1,22 @@
+.customer-experience-dashboard {
+  width: 100%;
+}
+
+.cx-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.cx-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 1200px) {
+  .cx-metrics-row {
+    grid-template-columns: 1fr;
+  }
+}

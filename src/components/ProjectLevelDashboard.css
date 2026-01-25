@@ -1,0 +1,18 @@
+.project-level-dashboard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1200px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}

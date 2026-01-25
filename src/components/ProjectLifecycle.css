@@ -1,0 +1,139 @@
+.project-lifecycle-panel {
+  overflow-x: auto;
+}
+
+.timeline-container {
+  display: flex;
+  gap: 0;
+  padding: 20px;
+  min-width: 800px;
+}
+
+.timeline-phase {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.phase-header {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.phase-indicator {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.timeline-phase.phase-completed .phase-indicator {
+  background: #d1fae5;
+  color: #059669;
+  border: 3px solid #10b981;
+}
+
+.timeline-phase.phase-current .phase-indicator {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 3px solid #3b82f6;
+  animation: pulse 2s infinite;
+}
+
+.timeline-phase.phase-pending .phase-indicator {
+  background: #f3f4f6;
+  color: #9ca3af;
+  border: 3px solid #d1d5db;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(59, 130, 246, 0);
+  }
+}
+
+.phase-icon {
+  font-size: 20px;
+}
+
+.phase-icon.current {
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.phase-info {
+  flex: 1;
+}
+
+.phase-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.phase-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.phase-duration,
+.phase-cost {
+  font-weight: 600;
+}
+
+.phase-milestones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: 52px;
+}
+
+.milestone-tag {
+  padding: 4px 10px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.timeline-phase.phase-completed .milestone-tag {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.timeline-phase.phase-current .milestone-tag {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.phase-connector {
+  position: absolute;
+  top: 20px;
+  left: 100%;
+  width: 100%;
+  height: 3px;
+  background: #e5e7eb;
+  z-index: -1;
+}
+
+.timeline-phase.phase-completed .phase-connector {
+  background: #10b981;
+}

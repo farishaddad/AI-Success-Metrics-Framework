@@ -1,0 +1,41 @@
+/* Feedback Button Styles */
+
+.feedback-button {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: var(--aws-primary);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 115, 187, 0.3);
+  transition: all var(--transition-default);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feedback-button:hover {
+  background: #005a94;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 115, 187, 0.4);
+}
+
+.feedback-button:active {
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feedback-button {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}

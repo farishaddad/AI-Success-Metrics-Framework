@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250">
+  <!-- Accenture Logo -->
+  <text x="50" y="150" font-family="Arial, sans-serif" font-size="90" font-weight="bold" fill="#000000">accenture</text>
+  <polygon points="340,80 360,80 350,60" fill="#A100FF"/>
+  
+  <!-- Divider -->
+  <line x1="500" y1="40" x2="500" y2="210" stroke="#000000" stroke-width="3"/>
+  
+  <!-- AWS Logo Text -->
+  <text x="580" y="120" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#000000">aws</text>
+  
+  <!-- AWS Smile -->
+  <path d="M 580 160 Q 750 180 920 160" stroke="#FF9900" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <circle cx="920" cy="160" r="6" fill="#FF9900"/>
+</svg>

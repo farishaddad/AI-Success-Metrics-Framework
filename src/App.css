@@ -1,0 +1,100 @@
+.app {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.app-header {
+  background: var(--aws-bg-primary);
+  border-bottom: 2px solid var(--aws-bg-secondary);
+  padding: 16px 24px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 0;
+}
+
+.header-content {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.back-to-landing {
+  background: none;
+  border: none;
+  color: var(--aws-primary);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all var(--transition-default);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-to-landing:hover {
+  background: var(--aws-bg-secondary);
+  transform: translateX(-2px);
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--aws-bg-secondary);
+  overflow-x: auto;
+  flex-wrap: wrap;
+  background: var(--aws-bg-primary);
+  padding: 8px 16px 0;
+  border-radius: 8px 8px 0 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.tab {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--aws-neutral);
+  cursor: pointer;
+  transition: all var(--transition-default);
+  margin-bottom: -2px;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: var(--aws-primary);
+  background: var(--aws-bg-secondary);
+  border-radius: 6px 6px 0 0;
+}
+
+.tab.active {
+  color: var(--aws-primary);
+  border-bottom-color: var(--aws-primary);
+  font-weight: 700;
+}
+
+/* Responsive Behavior */
+@media (max-width: 1200px) {
+  .app {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .tab {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  
+  .back-to-landing {
+    font-size: 14px;
+  }
+}

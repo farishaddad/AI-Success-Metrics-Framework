@@ -1,0 +1,117 @@
+.kpi-card {
+  background: var(--aws-bg-primary);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-default);
+  border-left: 4px solid transparent;
+}
+
+.kpi-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-left-color: var(--aws-primary);
+}
+
+.kpi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.kpi-title {
+  font-size: var(--font-body);
+  font-weight: 600;
+  color: var(--aws-neutral);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kpi-icon-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-default);
+}
+
+.kpi-card:hover .kpi-icon-container {
+  transform: scale(1.1);
+}
+
+.kpi-icon-container.positive {
+  background: rgba(29, 129, 2, 0.1);
+  color: var(--aws-success);
+}
+
+.kpi-icon-container.negative {
+  background: rgba(209, 50, 18, 0.1);
+  color: var(--aws-danger);
+}
+
+.kpi-icon-container.warning {
+  background: rgba(255, 153, 0, 0.1);
+  color: var(--aws-warning);
+}
+
+.kpi-icon-container.primary {
+  background: rgba(0, 115, 187, 0.1);
+  color: var(--aws-primary);
+}
+
+.kpi-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.kpi-value {
+  font-size: var(--font-kpi-small);
+  font-weight: 700;
+  color: var(--aws-primary);
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.kpi-subtitle {
+  font-size: var(--font-body);
+  color: var(--aws-neutral);
+  margin-bottom: 12px;
+}
+
+.kpi-comparison {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all var(--transition-default);
+}
+
+.kpi-comparison.positive {
+  background: rgba(29, 129, 2, 0.1);
+  color: var(--aws-success);
+}
+
+.kpi-comparison.negative {
+  background: rgba(209, 50, 18, 0.1);
+  color: var(--aws-danger);
+}
+
+.kpi-comparison.warning {
+  background: rgba(255, 153, 0, 0.1);
+  color: var(--aws-warning);
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+  .kpi-card {
+    padding: 16px;
+  }
+  
+  .kpi-value {
+    font-size: 28px;
+  }
+}
