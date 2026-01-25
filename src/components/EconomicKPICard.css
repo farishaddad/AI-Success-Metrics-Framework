@@ -1,0 +1,125 @@
+.economic-kpi-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.economic-kpi-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.economic-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.economic-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.economic-primary-value {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1;
+}
+
+.economic-subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: -8px;
+}
+
+.economic-formula {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 12px;
+  background: #f0f9ff;
+  border-radius: 6px;
+  border-left: 3px solid #3b82f6;
+}
+
+.formula-label {
+  font-size: 11px;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.formula-text {
+  font-size: 12px;
+  color: #1e40af;
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+}
+
+.economic-trend-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trend-label {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.economic-sparkline {
+  height: 50px;
+}
+
+.economic-histogram {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.histogram-target {
+  font-size: 12px;
+  color: #667eea;
+  font-weight: 600;
+  text-align: center;
+}
+
+.economic-benchmark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #fef3c7;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.benchmark-label {
+  color: #92400e;
+  font-weight: 500;
+}
+
+.benchmark-value {
+  color: #78350f;
+  font-weight: 700;
+}
+
+.economic-comparison {
+  font-size: 13px;
+  color: #4b5563;
+  padding: 8px 12px;
+  background: #f3f4f6;
+  border-radius: 6px;
+}
