@@ -1,0 +1,43 @@
+.economic-efficiency-dashboard {
+  width: 100%;
+}
+
+.economic-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.roi-pillars-panel {
+  grid-column: 1 / -1;
+  margin-bottom: 24px;
+}
+
+.economic-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.payback-timeline-panel {
+  height: 100%;
+}
+
+@media (max-width: 1400px) {
+  .economic-kpi-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .economic-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .economic-kpi-row {
+    grid-template-columns: 1fr;
+  }
+}

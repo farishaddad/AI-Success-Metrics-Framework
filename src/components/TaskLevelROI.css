@@ -1,0 +1,149 @@
+.task-roi-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.roi-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.roi-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.roi-table th {
+  padding: 14px 12px;
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.roi-table th:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sort-icon {
+  margin-left: 6px;
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+.roi-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.2s ease;
+}
+
+.roi-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.roi-table tbody tr.high {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.08) 0%, transparent 100%);
+}
+
+.roi-table tbody tr.medium {
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.08) 0%, transparent 100%);
+}
+
+.roi-table tbody tr.low {
+  background: linear-gradient(90deg, rgba(156, 163, 175, 0.05) 0%, transparent 100%);
+}
+
+.roi-table td {
+  padding: 12px;
+  color: #4b5563;
+}
+
+.roi-table td.task-name {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.roi-table td.highlight {
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+.roi-table td.savings {
+  font-weight: 700;
+  color: #10b981;
+}
+
+.roi-table tfoot {
+  background: #f9fafb;
+  border-top: 2px solid #667eea;
+}
+
+.roi-table tfoot td {
+  padding: 14px 12px;
+  font-size: 15px;
+}
+
+.total-row {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.metric-summary {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 16px 0;
+  padding: 16px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+  border-radius: 8px;
+}
+
+.summary-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.summary-label {
+  font-size: 12px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.summary-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.summary-value.positive {
+  color: #10b981;
+}
+
+@media (max-width: 768px) {
+  .roi-table {
+    font-size: 12px;
+  }
+  
+  .roi-table th,
+  .roi-table td {
+    padding: 8px 6px;
+  }
+  
+  .metric-summary {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

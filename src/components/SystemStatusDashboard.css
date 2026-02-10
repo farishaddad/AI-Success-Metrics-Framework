@@ -1,0 +1,338 @@
+.system-status-dashboard {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.status-header {
+  margin-bottom: 2rem;
+}
+
+.status-header h1 {
+  color: #232F3E;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.status-subtitle {
+  color: #687078;
+  font-size: 1rem;
+}
+
+/* Status Grid */
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.status-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e4e8;
+}
+
+.status-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.status-card-header h3 {
+  color: #232F3E;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.status-indicator {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.status-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.status-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.metric-label {
+  color: #687078;
+  font-size: 0.9rem;
+}
+
+.metric-value {
+  color: #232F3E;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.metric-value.endpoint {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: #0073BB;
+}
+
+.refresh-btn {
+  width: 100%;
+  padding: 0.6rem;
+  background: #0073BB;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.refresh-btn:hover {
+  background: #005a94;
+}
+
+/* Performance Section */
+.performance-section {
+  margin-bottom: 2rem;
+}
+
+.performance-section h2 {
+  color: #232F3E;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.metric-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e4e8;
+}
+
+.metric-card h3 {
+  color: #232F3E;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Memory Usage */
+.metric-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.memory-bar {
+  width: 100%;
+  height: 24px;
+  background: #f0f0f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.memory-used {
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 12px;
+}
+
+.memory-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.memory-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.memory-stat span {
+  color: #687078;
+  font-size: 0.85rem;
+}
+
+.memory-stat strong {
+  color: #232F3E;
+  font-size: 1rem;
+}
+
+/* Response Time */
+.metric-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.metric-value-large {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0073BB;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.metric-unit {
+  font-size: 1.5rem;
+  color: #687078;
+  font-weight: normal;
+}
+
+.metric-status {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Storage Stats */
+.storage-stats {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+.storage-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.storage-icon {
+  font-size: 2.5rem;
+}
+
+.storage-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.storage-count {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0073BB;
+}
+
+.storage-label {
+  color: #687078;
+  font-size: 0.85rem;
+}
+
+/* System Information */
+.system-info-section {
+  margin-bottom: 2rem;
+}
+
+.system-info-section h2 {
+  color: #232F3E;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-grid {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e4e8;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.info-label {
+  color: #687078;
+  font-size: 0.9rem;
+}
+
+.info-value {
+  color: #232F3E;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Auto-refresh indicator */
+.auto-refresh-info {
+  background: #f0f7ff;
+  border: 1px solid #0073BB;
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+  color: #0073BB;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.refresh-icon {
+  font-size: 1.2rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .system-status-dashboard {
+    padding: 1rem;
+  }
+
+  .status-grid,
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .storage-stats {
+    flex-direction: column;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}

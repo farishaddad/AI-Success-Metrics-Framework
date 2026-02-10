@@ -1,0 +1,278 @@
+.panel {
+  background: var(--aws-bg-primary);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-default), transform var(--transition-default);
+}
+
+.panel:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.panel-title {
+  font-size: var(--font-header);
+  font-weight: 700;
+  color: var(--aws-primary);
+  margin-bottom: 20px;
+}
+
+/* ROI Panel */
+.roi-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.roi-primary {
+  font-size: var(--font-kpi);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.roi-primary.positive {
+  color: var(--aws-success);
+}
+
+.roi-primary.negative {
+  color: var(--aws-danger);
+}
+
+.roi-sparkline {
+  height: 60px;
+  margin: 10px 0;
+}
+
+.roi-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.roi-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-label {
+  font-size: var(--font-label);
+  color: var(--aws-neutral);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.metric-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--aws-primary);
+}
+
+/* Cost Savings Panel */
+.total-savings {
+  font-size: var(--font-kpi-small);
+  font-weight: 700;
+  color: var(--aws-success);
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  margin-top: 16px;
+}
+
+/* Project Portfolio Panel */
+.donut-center-text {
+  font-family: inherit;
+}
+
+.custom-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-body);
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.legend-name {
+  flex: 1;
+  color: var(--aws-neutral);
+}
+
+.legend-value {
+  font-weight: 700;
+  color: var(--aws-primary);
+}
+
+/* Strategic Alignment Panel */
+.alignment-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bullet-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bullet-label {
+  font-size: var(--font-body);
+  font-weight: 600;
+  color: var(--aws-neutral);
+}
+
+.bullet-container {
+  position: relative;
+  height: 40px;
+}
+
+.bullet-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--aws-bg-secondary);
+  border-radius: 6px;
+  overflow: visible;
+}
+
+.bullet-target {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+.target-line {
+  width: 3px;
+  height: 100%;
+  background: var(--aws-danger);
+  box-shadow: 0 0 4px rgba(209, 50, 18, 0.5);
+}
+
+.bullet-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+  transition: width 0.6s ease;
+}
+
+.bullet-bar.above-target {
+  background: linear-gradient(90deg, var(--aws-success) 0%, #166d01 100%);
+}
+
+.bullet-bar.below-target {
+  background: linear-gradient(90deg, var(--aws-warning) 0%, #cc7a00 100%);
+}
+
+.bullet-value {
+  color: white;
+  font-size: var(--font-body);
+  font-weight: 700;
+  z-index: 3;
+}
+
+.alignment-legend {
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--aws-bg-secondary);
+}
+
+.alignment-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--aws-neutral);
+}
+
+.legend-line {
+  width: 24px;
+  height: 3px;
+  background: var(--aws-danger);
+  border-radius: 2px;
+}
+
+/* ROI Pillars Panel */
+.roi-pillars-panel {
+  grid-column: 1 / -1;
+}
+
+.metric-summary {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 16px 0;
+  padding: 16px;
+  background: linear-gradient(135deg, #e6f2ff 0%, #cce5ff 100%);
+  border-radius: 8px;
+  border: 1px solid var(--aws-primary);
+  border-opacity: 0.2;
+}
+
+.summary-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.summary-label {
+  font-size: var(--font-label);
+  color: var(--aws-neutral);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.summary-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--aws-primary);
+}
+
+.summary-value.positive {
+  color: var(--aws-success);
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+  .panel {
+    padding: 16px;
+  }
+  
+  .panel-title {
+    font-size: var(--font-subheader);
+  }
+  
+  .roi-metrics {
+    grid-template-columns: 1fr;
+  }
+  
+  .metric-summary {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

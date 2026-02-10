@@ -1,0 +1,112 @@
+.baseline-metrics-panel {
+  overflow-x: auto;
+}
+
+.metrics-table-container {
+  margin-top: 20px;
+}
+
+.metrics-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.metrics-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.metrics-table th {
+  padding: 14px 12px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.metrics-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.2s ease;
+}
+
+.metrics-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.metrics-table tbody tr.on-track {
+  border-left: 4px solid #10b981;
+}
+
+.metrics-table tbody tr.at-risk {
+  border-left: 4px solid #f59e0b;
+}
+
+.metrics-table tbody tr.off-track {
+  border-left: 4px solid #ef4444;
+}
+
+.metrics-table td {
+  padding: 12px;
+  color: #4b5563;
+}
+
+.metric-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.metric-value {
+  font-weight: 500;
+}
+
+.metric-value.current {
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+.metric-change {
+  font-weight: 600;
+}
+
+.metric-change.positive {
+  color: #10b981;
+}
+
+.metric-change.negative {
+  color: #ef4444;
+}
+
+.change-percent {
+  display: block;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.metric-trend {
+  padding: 0 !important;
+}
+
+.metric-target {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.metric-status {
+  text-align: center;
+}
+
+.status-icon {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .metrics-table {
+    font-size: 12px;
+  }
+  
+  .metrics-table th,
+  .metrics-table td {
+    padding: 8px 6px;
+  }
+}

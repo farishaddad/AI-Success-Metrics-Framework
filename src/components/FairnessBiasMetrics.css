@@ -1,0 +1,113 @@
+.fairness-panel {
+  grid-column: 1 / -1;
+}
+
+.fairness-legend {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 16px 0 24px;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.fairness-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.legend-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+}
+
+.heatmap-container {
+  overflow-x: auto;
+}
+
+.heatmap-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.heatmap-table thead {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+  color: white;
+}
+
+.heatmap-table th {
+  padding: 14px 12px;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.attribute-header {
+  text-align: left !important;
+  min-width: 180px;
+}
+
+.overall-value {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 4px;
+  opacity: 0.9;
+}
+
+.heatmap-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.attribute-cell {
+  padding: 12px;
+  font-weight: 500;
+  color: #1f2937;
+  background: #f9fafb;
+  border-right: 2px solid #e5e7eb;
+}
+
+.metric-cell {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.metric-cell:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  position: relative;
+}
+
+.cell-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.cell-deviation {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .heatmap-table {
+    font-size: 11px;
+  }
+  
+  .heatmap-table th,
+  .heatmap-table td {
+    padding: 8px 6px;
+  }
+}

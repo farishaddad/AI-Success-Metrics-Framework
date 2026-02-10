@@ -1,0 +1,258 @@
+/* Feedback List Styles */
+
+.feedback-list-container {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-list-header {
+  margin-bottom: 32px;
+}
+
+.feedback-list-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.feedback-list-title h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--aws-primary);
+  margin: 0;
+}
+
+.feedback-count {
+  background: var(--aws-bg-secondary);
+  color: var(--aws-neutral);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.feedback-list-controls {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.feedback-search {
+  flex: 1;
+  min-width: 250px;
+}
+
+.feedback-search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--aws-bg-secondary);
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all var(--transition-default);
+}
+
+.feedback-search-input:focus {
+  outline: none;
+  border-color: var(--aws-primary);
+  box-shadow: 0 0 0 3px rgba(0, 115, 187, 0.1);
+}
+
+.feedback-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feedback-filter label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--aws-neutral);
+  white-space: nowrap;
+}
+
+.feedback-filter-select {
+  padding: 10px 16px;
+  border: 2px solid var(--aws-bg-secondary);
+  border-radius: 8px;
+  font-size: 15px;
+  background: white;
+  color: var(--aws-neutral);
+  cursor: pointer;
+  transition: all var(--transition-default);
+  min-width: 180px;
+}
+
+.feedback-filter-select:focus {
+  outline: none;
+  border-color: var(--aws-primary);
+  box-shadow: 0 0 0 3px rgba(0, 115, 187, 0.1);
+}
+
+/* Empty State */
+.feedback-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--aws-neutral);
+}
+
+.feedback-empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.feedback-empty p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.feedback-empty span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Feedback Items */
+.feedback-list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feedback-item {
+  background: var(--aws-bg-secondary);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 24px;
+  transition: all var(--transition-default);
+}
+
+.feedback-item:hover {
+  border-color: var(--aws-primary);
+  box-shadow: 0 4px 12px rgba(0, 115, 187, 0.1);
+  transform: translateY(-2px);
+}
+
+.feedback-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.feedback-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.feedback-item-page {
+  background: var(--aws-primary);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.feedback-item-date {
+  color: var(--aws-neutral);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.feedback-item-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.feedback-author-icon {
+  font-size: 16px;
+}
+
+.feedback-author-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--aws-neutral);
+}
+
+.feedback-author-email {
+  font-size: 13px;
+  color: var(--aws-neutral);
+  opacity: 0.7;
+}
+
+.feedback-item-content {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid var(--aws-primary);
+}
+
+.feedback-item-content p {
+  margin: 0;
+  color: var(--aws-neutral);
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feedback-list-container {
+    padding: 20px;
+  }
+
+  .feedback-list-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .feedback-list-title h2 {
+    font-size: 24px;
+  }
+
+  .feedback-list-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .feedback-search {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .feedback-filter {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .feedback-filter-select {
+    width: 100%;
+  }
+
+  .feedback-item {
+    padding: 16px;
+  }
+
+  .feedback-item-header {
+    flex-direction: column;
+  }
+
+  .feedback-item-author {
+    flex-wrap: wrap;
+  }
+}

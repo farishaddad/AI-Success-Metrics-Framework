@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Metrics Dashboard Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .success { background-color: #d4edda; border-color: #c3e6cb; }
+        .error { background-color: #f8d7da; border-color: #f5c6cb; }
+        .info { background-color: #d1ecf1; border-color: #bee5eb; }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover { background: #0056b3; }
+        pre {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🤖 Agent Metrics Dashboard Test</h1>
+    
+    <div class="test-section info">
+        <h2>Test Instructions</h2>
+        <ol>
+            <li>Make sure all servers are running (Backend: 3001, Frontend: 3000, Agent: 8081)</li>
+            <li>Click the buttons below to test each endpoint</li>
+            <li>Open the dashboard at <a href="http://localhost:3000" target="_blank">http://localhost:3000</a></li>
+            <li>Navigate to the "🤖 Agent Metrics" tab</li>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>API Endpoint Tests</h2>
+        <button onclick="testHealth()">Test Health Check</button>
+        <button onclick="testSummary()">Test Summary Endpoint</button>
+        <button onclick="testAllMetrics()">Test All Metrics</button>
+        <button onclick="testAgentInvocation()">Test Agent Invocation</button>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:3001/api';
+        const AGENT_URL = 'http://localhost:8081/invocations';
+
+        function displayResult(title, data, isError = false) {
+            const resultsDiv = document.getElementById('results');
+            const resultClass = isError ? 'error' : 'success';
+            resultsDiv.innerHTML += `
+                <div class="test-section ${resultClass}">
+                    <h3>${title}</h3>
+                    <pre>${JSON.stringify(data, null, 2)}</pre>
+                </div>
+            `;
+        }
+
+        async function testHealth() {
+            try {
+                const response = await fetch(`${API_BASE}/health`);
+                const data = await response.json();
+                displayResult('✅ Health Check', data);
+            } catch (error) {
+                displayResult('❌ Health Check Failed', { error: error.message }, true);
+            }
+        }
+
+        async function testSummary() {
+            try {
+                const response = await fetch(`${API_BASE}/agent-metrics/summary`);
+                const data = await response.json();
+                displayResult('✅ Summary Endpoint', data);
+            } catch (error) {
+                displayResult('❌ Summary Failed', { error: error.message }, true);
+            }
+        }
+
+        async function testAllMetrics() {
+            try {
+                const response = await fetch(`${API_BASE}/agent-metrics`);
+                const data = await response.json();
+                displayResult('✅ All Metrics', { count: data.length, sample: data[0] });
+            } catch (error) {
+                displayResult('❌ All Metrics Failed', { error: error.message }, true);
+            }
+        }
+
+        async function testAgentInvocation() {
+            try {
+                displayResult('⏳ Testing Agent', { status: 'Sending request...' });
+                
+                const response = await fetch(AGENT_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        prompt: 'Hello! This is a test.',
+                        session_id: 'test_' + Date.now()
+                    })
+                });
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let result = '';
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    result += decoder.decode(value);
+                }
+
+                displayResult('✅ Agent Response', { 
+                    status: 'Success',
+                    responseLength: result.length,
+                    preview: result.substring(0, 200) + '...'
+                });
+            } catch (error) {
+                displayResult('❌ Agent Test Failed', { error: error.message }, true);
+            }
+        }
+    </script>
+</body>
+</html>

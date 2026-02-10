@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+server/node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.production
+server/.env
+server/.env.production
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+server/database/*.db
+
+# AWS deployment files with credentials
+AWS_ACCOUNT_SETUP.md
+AWS_CONNECTION_SUMMARY.md
+AWS_DEPLOYMENT_STEP_BY_STEP.md
+
+# Logs
+*.log
+npm-debug.log*
+server/logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Elastic Beanstalk
+.elasticbeanstalk/
+.ebextensions/
+
+# Temporary files
+*.tmp
+*.temp

@@ -1,0 +1,21 @@
+.innovation-capacity-dashboard {
+  width: 100%;
+}
+
+.innovation-velocity-panel {
+  grid-column: 1 / -1;
+  margin-bottom: 24px;
+}
+
+.innovation-middle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1200px) {
+  .innovation-middle-grid {
+    grid-template-columns: 1fr;
+  }
+}

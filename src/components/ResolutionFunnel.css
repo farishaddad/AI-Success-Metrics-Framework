@@ -1,0 +1,62 @@
+.resolution-funnel-panel {
+  grid-column: 1 / -1;
+}
+
+.funnel-summary {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 16px 0 32px;
+  padding: 16px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+  border-radius: 8px;
+}
+
+.funnel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+.funnel-stage {
+  display: flex;
+  justify-content: center;
+}
+
+.funnel-bar {
+  min-width: 200px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.funnel-bar:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.funnel-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.funnel-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.funnel-stats {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .funnel-bar {
+    width: 100% !important;
+  }
+}

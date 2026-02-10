@@ -1,0 +1,214 @@
+.pillar-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.summary-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.metric-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.metric-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1;
+}
+
+.metric-value.positive {
+  color: #10b981;
+}
+
+.metric-value.negative {
+  color: #ef4444;
+}
+
+@media (max-width: 1024px) {
+  .summary-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Revenue Generation Styles */
+.revenue-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.sunburst-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.breakdown-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: white;
+  border-radius: 6px;
+  border-left: 3px solid #3b82f6;
+}
+
+.category-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.category-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.funnel-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 20px;
+}
+
+.funnel-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.funnel-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  padding: 12px;
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+
+.funnel-stage-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.funnel-stage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.funnel-stage:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.funnel-stage.before {
+  background: linear-gradient(90deg, #9ca3af 0%, #6b7280 100%);
+  color: white;
+}
+
+.funnel-stage.after {
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.stage-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.stage-value {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.improvement-badge {
+  padding: 4px 12px;
+  background: #10b981;
+  color: white;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Risk Mitigation Styles */
+.savings-highlight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 20px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.highlight-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+.highlight-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .revenue-grid,
+  .funnel-comparison {
+    grid-template-columns: 1fr;
+  }
+}
