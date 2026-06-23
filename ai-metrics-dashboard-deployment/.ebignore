@@ -1,0 +1,71 @@
+# .ebignore - Files to exclude from Elastic Beanstalk deployment
+
+# Dependencies (will be installed on server)
+node_modules/
+server/node_modules/
+
+# Git
+.git/
+.gitignore
+
+# Environment files (use EB environment variables instead)
+.env
+.env.local
+.env.development
+server/.env
+server/.env.local
+
+# Build artifacts (frontend will be built separately)
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# SSL certificates (local development only)
+certs/
+*.pem
+*.key
+*.crt
+
+# Documentation (not needed on server)
+*.md
+!README.md
+
+# Test files
+test/
+tests/
+__tests__/
+*.test.js
+*.spec.js
+
+# Coverage
+coverage/
+
+# Docker files (not needed for EB)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Scripts
+*.bat
+*.sh
+!server/scripts/*.js
